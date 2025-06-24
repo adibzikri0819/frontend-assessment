@@ -11,6 +11,10 @@
   },
   "homepage": "https://adibzikri0819.github.io/frontend-assessment",
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/icons-material": "^7.1.2",
+    "@mui/material": "^7.1.2",
     "@next/font": "^14.2.15",
     "next": "15.3.4",
     "react": "^19.0.0",
