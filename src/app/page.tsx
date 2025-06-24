@@ -198,6 +198,7 @@ export default function IncorporationPage() {
               textTransform: 'none',
               fontSize: '16px',
               fontWeight: 600,
+              fontFamily: 'Metropolis-Bold, var(--font-metropolis)',
               py: 1.5,
             }}
           >
@@ -210,6 +211,7 @@ export default function IncorporationPage() {
               textTransform: 'none',
               fontSize: '16px',
               fontWeight: 600,
+              fontFamily: 'Metropolis-Bold, var(--font-metropolis)',
               py: 1.5,
             }}
           >
@@ -222,6 +224,7 @@ export default function IncorporationPage() {
               textTransform: 'none',
               fontSize: '16px',
               fontWeight: 600,
+              fontFamily: 'Metropolis-Bold, var(--font-metropolis)',
               py: 1.5,
             }}
           >
@@ -234,6 +237,7 @@ export default function IncorporationPage() {
               textTransform: 'none',
               fontSize: '16px',
               fontWeight: 600,
+              fontFamily: 'Metropolis-Bold, var(--font-metropolis)',
               py: 1.5,
             }}
           >
@@ -279,8 +283,8 @@ export default function IncorporationPage() {
                     color: '#374151', 
                     textTransform: 'none',
                     fontSize: '14px',
-                    fontFamily: 'Metropolis-Regular, var(--font-metropolis)', // Changed from SemiBold to Regular
                     fontWeight: 600,
+                    fontFamily: 'Metropolis-SemiBold, var(--font-metropolis)',
                     '&:hover': { backgroundColor: 'transparent' }
                   }}
                   endIcon={<ArrowDownIcon sx={{ fontSize: 16 }} />}
@@ -292,8 +296,8 @@ export default function IncorporationPage() {
                     color: '#374151', 
                     textTransform: 'none',
                     fontSize: '14px',
-                    fontFamily: 'Metropolis-Regular, var(--font-metropolis)', // Changed from SemiBold to Regular
                     fontWeight: 600,
+                    fontFamily: 'Metropolis-SemiBold, var(--font-metropolis)',
                     '&:hover': { backgroundColor: 'transparent' }
                   }}
                   endIcon={<ArrowDownIcon sx={{ fontSize: 16 }} />}
@@ -305,8 +309,8 @@ export default function IncorporationPage() {
                     color: '#374151', 
                     textTransform: 'none',
                     fontSize: '14px',
-                    fontFamily: 'Metropolis-Regular, var(--font-metropolis)', // Changed from SemiBold to Regular
                     fontWeight: 600,
+                    fontFamily: 'Metropolis-SemiBold, var(--font-metropolis)',
                     '&:hover': { backgroundColor: 'transparent' }
                   }}
                   endIcon={<ArrowDownIcon sx={{ fontSize: 16 }} />}
@@ -361,8 +365,8 @@ export default function IncorporationPage() {
                   sx={{ 
                     color: '#374151', 
                     fontSize: '13px', 
-                    fontFamily: 'Metropolis-Regular, var(--font-metropolis)', // Changed from SemiBold to Regular
                     fontWeight: 600,
+                    fontFamily: 'Metropolis-SemiBold, var(--font-metropolis)',
                     whiteSpace: 'nowrap' 
                   }}
                 >
@@ -400,6 +404,7 @@ export default function IncorporationPage() {
                         color: '#6b7280', 
                         fontSize: '11px', 
                         fontWeight: 600,
+                        fontFamily: 'Metropolis-SemiBold, var(--font-metropolis)',
                         display: 'block', 
                         mb: 1 
                       }}
@@ -411,7 +416,8 @@ export default function IncorporationPage() {
                         value={companyType}
                         onChange={(e) => setCompanyType(e.target.value)}
                         sx={{ 
-                          fontSize: '13px', 
+                          fontSize: '13px',
+                          fontFamily: 'Metropolis-Thin, var(--font-metropolis)', 
                           '& .MuiSelect-select': { 
                             color: '#374151'
                           }
@@ -431,6 +437,7 @@ export default function IncorporationPage() {
                         color: '#6b7280', 
                         fontSize: '11px', 
                         fontWeight: 600,
+                        fontFamily: 'Metropolis-SemiBold, var(--font-metropolis)',
                         display: 'block', 
                         mb: 1 
                       }}
@@ -442,7 +449,8 @@ export default function IncorporationPage() {
                         value={region}
                         onChange={(e) => setRegion(e.target.value)}
                         sx={{ 
-                          fontSize: '13px', 
+                          fontSize: '13px',
+                          fontFamily: 'Metropolis-Thin, var(--font-metropolis)', 
                           '& .MuiSelect-select': { 
                             color: '#374151'
                           }
@@ -463,6 +471,7 @@ export default function IncorporationPage() {
                         color: '#6b7280', 
                         fontSize: '11px', 
                         fontWeight: 600,
+                        fontFamily: 'Metropolis-SemiBold, var(--font-metropolis)',
                         display: 'block', 
                         mb: 1 
                       }}
@@ -474,7 +483,8 @@ export default function IncorporationPage() {
                         value={dateOfIncorporation}
                         onChange={(e) => setDateOfIncorporation(e.target.value)}
                         sx={{ 
-                          fontSize: '13px', 
+                          fontSize: '13px',
+                          fontFamily: 'Metropolis-Thin, var(--font-metropolis)', 
                           '& .MuiSelect-select': { 
                             color: '#374151'
                           }
@@ -498,6 +508,7 @@ export default function IncorporationPage() {
                       textTransform: 'none',
                       fontSize: '14px',
                       fontWeight: 600,
+                      fontFamily: 'Metropolis-Bold, var(--font-metropolis)',
                       '&:hover': {
                         backgroundColor: '#1d4ed8'
                       }
@@ -518,6 +529,7 @@ export default function IncorporationPage() {
                     color: '#6b7280', 
                     fontSize: '11px', 
                     fontWeight: 600,
+                    fontFamily: 'Metropolis-Bold, var(--font-metropolis)',
                     display: 'block', 
                     mb: 0.5 
                   }}
@@ -532,6 +544,7 @@ export default function IncorporationPage() {
                     sx={{ 
                       fontSize: '13px', 
                       fontWeight: 100,
+                      fontFamily: 'Metropolis-Thin, var(--font-metropolis)',
                       '& .MuiSelect-select': { 
                         padding: 0,
                         color: '#374151'
@@ -554,6 +567,7 @@ export default function IncorporationPage() {
                     color: '#6b7280', 
                     fontSize: '11px', 
                     fontWeight: 600,
+                    fontFamily: 'Metropolis-Bold, var(--font-metropolis)',
                     display: 'block', 
                     mb: 0.5 
                   }}
@@ -568,6 +582,7 @@ export default function IncorporationPage() {
                     sx={{ 
                       fontSize: '13px', 
                       fontWeight: 100,
+                      fontFamily: 'Metropolis-Thin, var(--font-metropolis)',
                       '& .MuiSelect-select': { 
                         padding: 0,
                         color: '#374151'
@@ -591,6 +606,7 @@ export default function IncorporationPage() {
                     color: '#6b7280', 
                     fontSize: '11px', 
                     fontWeight: 600,
+                    fontFamily: 'Metropolis-Bold, var(--font-metropolis)',
                     display: 'block', 
                     mb: 0.5 
                   }}
@@ -605,6 +621,7 @@ export default function IncorporationPage() {
                     sx={{ 
                       fontSize: '13px', 
                       fontWeight: 100,
+                      fontFamily: 'Metropolis-Thin, var(--font-metropolis)',
                       '& .MuiSelect-select': { 
                         padding: 0,
                         color: '#374151'
@@ -630,6 +647,7 @@ export default function IncorporationPage() {
                   textTransform: 'none',
                   fontSize: '14px',
                   fontWeight: 600,
+                  fontFamily: 'Metropolis-Bold, var(--font-metropolis)',
                   minWidth: '120px',
                   '&:hover': {
                     backgroundColor: '#1d4ed8'
@@ -652,6 +670,7 @@ export default function IncorporationPage() {
               variant={isMobile ? "h5" : "h4"} 
               sx={{
                 fontWeight: 600,
+                fontFamily: 'Metropolis-Bold, var(--font-metropolis)',
                 color: '#111827',
                 mb: 2
               }}
@@ -662,6 +681,7 @@ export default function IncorporationPage() {
               variant="body1" 
               sx={{
                 fontWeight: 400,
+                fontFamily: 'Metropolis-Thin, var(--font-metropolis)',
                 color: '#6b7280'
               }}
             >
@@ -677,6 +697,7 @@ export default function IncorporationPage() {
                 textTransform: 'none',
                 fontSize: '14px',
                 fontWeight: 400,
+                fontFamily: 'Metropolis-Regular, var(--font-metropolis)',
                 backgroundColor: 'transparent',
                 border: 'none',
                 '&:hover': { backgroundColor: 'rgba(0,0,0,0.04)' }
@@ -695,6 +716,7 @@ export default function IncorporationPage() {
                 textTransform: 'none',
                 fontSize: '14px',
                 fontWeight: 400,
+                fontFamily: 'Metropolis-Bold, var(--font-metropolis)',
                 backgroundColor: 'transparent',
                 border: 'none',
                 '&:hover': { backgroundColor: 'rgba(0,0,0,0.04)' }
@@ -730,6 +752,7 @@ export default function IncorporationPage() {
                           fontWeight: 600,
                           color: '#111827',
                           fontSize: '16px',
+                          fontFamily: 'Metropolis-Bold, var(--font-metropolis)',
                           lineHeight: 1.2,
                           mb: 0.5,
                           overflow: 'hidden',
@@ -743,6 +766,7 @@ export default function IncorporationPage() {
                         variant="body2" 
                         sx={{
                           fontWeight: 600,
+                          fontFamily: 'Metropolis-Bold, var(--font-metropolis)',
                           color: '#6b7280',
                           fontSize: '12px'
                         }}
@@ -755,6 +779,7 @@ export default function IncorporationPage() {
                         variant="body2" 
                         sx={{
                           fontWeight: 600,
+                          fontFamily: 'Metropolis-Bold, var(--font-metropolis)',
                           color: '#111827',
                           fontSize: '14px',
                           mr: 0.5
@@ -776,6 +801,7 @@ export default function IncorporationPage() {
                       color: '#6b7280',
                       mb: 3,
                       fontSize: '13px',
+                      fontFamily: 'Metropolis-Regular, var(--font-metropolis)',
                       lineHeight: 1.4,
                       display: '-webkit-box',
                       WebkitLineClamp: 2,
@@ -792,6 +818,7 @@ export default function IncorporationPage() {
                       sx={{
                         color: '#6b7280',
                         fontSize: '12px',
+                        fontFamily: 'Metropolis-Regular, var(--font-metropolis)',
                         mb: 1
                       }}
                     >
@@ -803,6 +830,7 @@ export default function IncorporationPage() {
                           variant="h6" 
                           sx={{
                             fontWeight: 600,
+                            fontFamily: 'Metropolis-Bold, var(--font-metropolis)',
                             color: '#111827',
                             fontSize: '18px'
                           }}
@@ -815,7 +843,8 @@ export default function IncorporationPage() {
                         variant="body2" 
                         sx={{
                           color: '#6b7280',
-                          fontSize: '12px'
+                          fontSize: '12px',
+                          fontFamily: 'Metropolis-Regular, var(--font-metropolis)',
                         }}
                       >
                         ({company.clientCount} clients)
@@ -831,7 +860,7 @@ export default function IncorporationPage() {
                         textTransform: 'none',
                         fontSize: '12px',
                         fontFamily: 'Metropolis-Regular, var(--font-metropolis)',
-                        fontWeight: 400, // Explicitly set to match Metropolis-Regular
+                        fontWeight: 400,
                         backgroundColor: '#374151',
                         color: '#ffffff',
                         borderRadius: '20px',
@@ -852,8 +881,8 @@ export default function IncorporationPage() {
                       sx={{
                         textTransform: 'none',
                         fontSize: '12px',
-                        fontFamily: 'Metropolis-Regular, var(--font-metropolis)', // Changed from SemiBold to Regular
-                        fontWeight: 400, // Changed from 600 to 400 to match Message button
+                        fontFamily: 'Metropolis-Regular, var(--font-metropolis)',
+                        fontWeight: 400,
                         backgroundColor: '#1e40af',
                         borderRadius: '20px',
                         px: 3,
