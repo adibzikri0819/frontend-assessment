@@ -884,7 +884,7 @@ const handleMobileProfileMenuClose = () => {
         {/* Company Cards */}
         <Grid container spacing={3}>
           {companies.map((company) => (
-            <Grid item xs={12} sm={6} md={6} lg={3} key={company.id}>
+            <Grid size={{ xs: 12, sm: 6, md: 6, lg: 3 }} key={company.id}>
               <Card className="h-full shadow-sm hover:shadow-md transition-shadow">
                 <div 
                   className="h-32 bg-white flex items-center justify-center relative border-b border-gray-100"
