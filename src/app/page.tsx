@@ -133,6 +133,63 @@ const companies = [
     completionDays: '5-7',
     tags: ['Message', 'Incorporate'],
   },
+  {
+    id: 5,
+    name: 'Gobiz Cosec Firm',
+    subtitle: 'Company Secretary',
+    logo: '/logos/global-tech-networking.png',
+    rating: 4.9,
+    description: 'Incorporate your company with us and get a FREE CTC copies.',
+    price: 'RM 1,600',
+    originalPrice: 'RM 3,200',
+    discount: '50% off',
+    clientCount: 120,
+    completionDays: '3-5',
+    tags: ['Startup', 'Message', 'Incorporate'],
+  },
+  {
+    id: 6,
+    name: 'Consistent Net',
+    subtitle: 'Digital Services',
+    logo: '/logos/partnership-investment.png',
+    rating: 3.2,
+    description: 'Get 50% off for 1st month of Secretary services',
+    price: 'RM 1,499',
+    originalPrice: 'RM 2,000',
+    discount: '25% saving',
+    clientCount: 85,
+    completionDays: '2-4',
+    tags: ['Message', 'Incorporate'],
+  },
+  {
+    id: 7,
+    name: 'Sarah Connor',
+    subtitle: 'Individual Secretary',
+    logo: '/logos/sarah-connor.png',
+    rating: 5.0,
+    description: 'With more than 10 years in the industry, your company is in good hands.',
+    price: 'RM 1,250',
+    originalPrice: 'RM 1,500',
+    discount: '17% saving',
+    clientCount: 200,
+    completionDays: '1-3',
+    tags: ['Message', 'Incorporate'],
+    isIndividual: true,
+  },
+  {
+    id: 8,
+    name: 'Expert Services',
+    subtitle: 'Professional Services',
+    logo: '/logos/expert-services.png',
+    rating: 1.1,
+    description: 'We deliver the best Secretarial Services in Malaysia',
+    price: 'RM 2,200',
+    originalPrice: 'RM 2,500',
+    discount: '12% saving',
+    clientCount: 50,
+    completionDays: '5-7',
+    tags: ['Message', 'Incorporate'],
+  },
 ];
 
 export default function IncorporationPage() {
@@ -167,6 +224,16 @@ export default function IncorporationPage() {
   const handleMobileMenuToggle = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
+
+const [profileMenuAnchorEl, setProfileMenuAnchorEl] = useState<null | HTMLElement>(null);
+
+const handleMobileProfileMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
+  setProfileMenuAnchorEl(event.currentTarget);
+};
+
+const handleMobileProfileMenuClose = () => {
+  setProfileMenuAnchorEl(null);
+};
 
   const MobileNavigation = () => (
     <Drawer
@@ -261,6 +328,15 @@ export default function IncorporationPage() {
                 style={{ width: isMobile ? '100px' : '120px', height: 'auto', marginRight: '12px' }}
               />
             </div>
+
+             {isMobile && (
+              <IconButton
+                onClick={handleMobileMenuToggle}
+                sx={{ mr: 10 }}
+              >
+                <MenuIcon sx={{ fontSize: 24, color: '#6b7280' }} />
+              </IconButton>
+            )}
             
             {/* Desktop Navigation */}
             {!isMobile && (
@@ -322,66 +398,144 @@ export default function IncorporationPage() {
           </div>
 
           <div className="flex items-center space-x-3" style={{ paddingTop: isMobile ? '8px' : '24px' }}>
-            {/* Mobile Menu Button */}
-            {isMobile && (
-              <IconButton
-                onClick={handleMobileMenuToggle}
-                sx={{ mr: 1 }}
-              >
-                <MenuIcon sx={{ fontSize: 24, color: '#6b7280' }} />
-              </IconButton>
-            )}
-            
-            {/* User Profile Section */}
-            <div className="flex items-center space-x-1 bg-white rounded-full px-3 py-2 border border-gray-200 shadow-sm">
-              {!isMobile && (
-                <>
-                  <IconButton size="small" sx={{ p: 0.75, mr: 0.5 }}>
-                    <Badge 
-                      badgeContent="" 
-                      variant="dot" 
-                      sx={{ 
-                        '& .MuiBadge-dot': { 
-                          backgroundColor: '#ef4444', 
-                          width: 6, 
-                          height: 6,
-                          top: 3,
-                          right: 3
-                        } 
-                      }}
-                    >
-                      <NotificationsIcon sx={{ fontSize: 18, color: '#6b7280' }} />
-                    </Badge>
-                  </IconButton>
-                  <IconButton size="small" sx={{ p: 0.75, mr: 1 }}>
-                    <SettingsIcon sx={{ fontSize: 18, color: '#6b7280' }} />
-                  </IconButton>
-                </>
-              )}
-              <Avatar sx={{ width: 32, height: 32, mr: isMobile ? 0 : 1.5 }} src="/api/placeholder/32/32" />
-              {!isMobile && (
-                <Typography 
-                  variant="body2" 
-                  sx={{ 
-                    color: '#374151', 
-                    fontSize: '13px', 
-                    fontWeight: 600,
-                    fontFamily: 'Metropolis-SemiBold, var(--font-metropolis)',
-                    whiteSpace: 'nowrap' 
-                  }}
-                >
-                  Joachim Berther
-                </Typography>
-              )}
-            </div>
+  {/* Mobile Menu Button - Only show hamburger menu on mobile */}
+  {isMobile ? (
+    <IconButton
+      onClick={handleMobileProfileMenuOpen}
+      sx={{ mr: 1 }}
+    >
+      <MenuIcon sx={{ fontSize: 24, color: '#6b7280' }} />
+    </IconButton>
+  ) : (
+    /* Desktop User Profile Section */
+    <div className="flex items-center space-x-1 bg-white rounded-full px-3 py-2 border border-gray-200 shadow-sm">
+      <IconButton size="small" sx={{ p: 0.75, mr: 0.5 }}>
+        <MenuIcon sx={{ fontSize: 18, color: '#6b7280' }} />
+      </IconButton>
+      <IconButton size="small" sx={{ p: 0.75, mr: 0.5 }}>
+        <Badge 
+          badgeContent="" 
+          variant="dot" 
+          sx={{ 
+            '& .MuiBadge-dot': { 
+              backgroundColor: '#ef4444', 
+              width: 6, 
+              height: 6,
+              top: 3,
+              right: 3
+            } 
+          }}
+        >
+          <NotificationsIcon sx={{ fontSize: 18, color: '#6b7280' }} />
+        </Badge>
+      </IconButton>
+      <IconButton size="small" sx={{ p: 0.75, mr: 1 }}>
+        <SettingsIcon sx={{ fontSize: 18, color: '#6b7280' }} />
+      </IconButton>
+      <Avatar sx={{ width: 32, height: 32, mr: 1.5 }} src="/api/placeholder/32/32" />
+      <Typography 
+        variant="body2" 
+        sx={{ 
+          color: '#374151', 
+          fontSize: '13px', 
+          fontWeight: 600,
+          fontFamily: 'Metropolis-SemiBold, var(--font-metropolis)',
+          whiteSpace: 'nowrap' 
+        }}
+      >
+        Joachim Berther
+      </Typography>
+    </div>
+  )}
             <Menu
               anchorEl={anchorEl}
               open={Boolean(anchorEl)}
               onClose={handleMenuClose}
             >
-              <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-              <MenuItem onClick={handleMenuClose}>Settings</MenuItem>
-              <MenuItem onClick={handleMenuClose}>Logout</MenuItem>
+             
+            </Menu>
+
+           {/* Mobile Profile Menu */}
+            <Menu
+              anchorEl={profileMenuAnchorEl}
+              open={Boolean(profileMenuAnchorEl)}
+              onClose={handleMobileProfileMenuClose}
+              anchorOrigin={{
+                vertical: 'bottom',
+                horizontal: 'right',
+              }}
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'right',
+              }}
+              sx={{
+                '& .MuiPaper-root': {
+                  borderRadius: '12px',
+                  boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+                  border: '1px solid #e5e7eb',
+                  minWidth: '200px',
+                }
+              }}
+            >
+              {/* Profile Section */}
+              <Box sx={{ p: 2, borderBottom: '1px solid #e5e7eb' }}>
+                <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+                  <Avatar sx={{ width: 40, height: 40 }} src="/api/placeholder/40/40" />
+                  <Typography 
+                    variant="body2" 
+                    sx={{ 
+                      color: '#374151', 
+                      fontSize: '14px', 
+                      fontWeight: 600,
+                      fontFamily: 'Metropolis-SemiBold, var(--font-metropolis)',
+                    }}
+                  >
+                    Joachim Berther
+                  </Typography>
+                </Box>
+              </Box>
+              
+              {/* Menu Items */}
+              <MenuItem onClick={handleMobileProfileMenuClose} sx={{ py: 1.5, px: 2 }}>
+                <IconButton size="small" sx={{ p: 0, mr: 2 }}>
+                  <Badge 
+                    badgeContent="" 
+                    variant="dot" 
+                    sx={{ 
+                      '& .MuiBadge-dot': { 
+                        backgroundColor: '#ef4444', 
+                        width: 6, 
+                        height: 6,
+                        top: 2,
+                        right: 2
+                      } 
+                    }}
+                  >
+                    <NotificationsIcon sx={{ fontSize: 20, color: '#6b7280' }} />
+                  </Badge>
+                </IconButton>
+                <Typography sx={{ fontFamily: 'Metropolis-Regular, var(--font-metropolis)', fontSize: '14px' }}>
+                  Notifications
+                </Typography>
+              </MenuItem>
+              
+              <MenuItem onClick={handleMobileProfileMenuClose} sx={{ py: 1.5, px: 2 }}>
+                <IconButton size="small" sx={{ p: 0, mr: 2 }}>
+                  <SettingsIcon sx={{ fontSize: 20, color: '#6b7280' }} />
+                </IconButton>
+                <Typography sx={{ fontFamily: 'Metropolis-Regular, var(--font-metropolis)', fontSize: '14px' }}>
+                  Settings
+                </Typography>
+              </MenuItem>
+              
+              <MenuItem onClick={handleMobileProfileMenuClose} sx={{ py: 1.5, px: 2 }}>
+                <IconButton size="small" sx={{ p: 0, mr: 2 }}>
+                  <AccountIcon sx={{ fontSize: 20, color: '#6b7280' }} />
+                </IconButton>
+                <Typography sx={{ fontFamily: 'Metropolis-Regular, var(--font-metropolis)', fontSize: '14px' }}>
+                  Profile
+                </Typography>
+              </MenuItem>
             </Menu>
           </div>
         </Toolbar>
